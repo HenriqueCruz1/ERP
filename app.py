@@ -16,7 +16,7 @@ def listar_produtos():
     conexao = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Mh1*4*7*",
+        password="[SENHA]",
         database="projeto_python"
     )
 
@@ -39,7 +39,7 @@ def criar_produto():
     conexao = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Mh1*4*7*",
+        password="[SENHA]",
         database="projeto_python"
     )
 
@@ -64,7 +64,7 @@ def excluir_produto(id):
     conexao = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Mh1*4*7*",
+        password="[SENHA]",
         database="projeto_python"
     )
 
