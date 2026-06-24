@@ -9,7 +9,9 @@ def login(email, senha):
         return False
   #   Proteção de négocio
 
-    if email.split():
+#leia a string, verifique a existencia de um caractere especifico. 
+
+
     
 
 

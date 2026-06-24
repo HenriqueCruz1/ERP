@@ -30,5 +30,7 @@ proteção de borda - failfast (nulos, vazios, espaços)
 
 proteção de negocio(contém arroba, se é maior que 50)
 
+- arquitetar camadas
+
 core da aplicação (até que os dados estiverem seguros)
 
