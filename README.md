@@ -38,5 +38,5 @@ Especificação de camadas teste // Projetando arquitetura de filtros.
 
 Modelagem de dados:
 
-+ armazenar usuario em dicionario e analisar duplicaras (em andamento...)
++ armazenar usuario em dicionario e analisar duplicatas (em andamento...)
 
