@@ -1,4 +1,4 @@
-Banco_de_dados = []
+banco_de_usuarios = {}
 
 def menu():
 
@@ -6,7 +6,7 @@ def menu():
     print('   SISTEMA DE ACESSO')
     print('='*20)
     print('1. Cadastrar novo usuário')
-    print('2. Fazer login em uma.')
+    print('2. Fazer login')
     print('3. Sair')
     return input('Escolha uma opção: ')
 
@@ -20,7 +20,7 @@ def cadastrar():
             print('Esté campo não pode ficar vazio.')
             continue
 
-        if login in Banco_de_dados:
+        if login in banco_de_usuarios['login']:
             print('Esté nome de usúario não está disponivel.')
             continue
 
@@ -32,35 +32,36 @@ def cadastrar():
             print('O nome do usuario não pode ter caracteres especiais')
             continue 
 
-        Banco_de_dados.append(login)
+        banco_de_usuarios['login'] = login
+
         break
         
         
-    while True:
-
-        email = str(input('Digite o e-mail do novo usuário: ')).strip()
-
-        if email in Banco_de_dados:
-            print('O e-mail já está cadastrado em outra conta.')
-            continue
-    
-        if email == '':
-            print('O campo não pode ficar vazio.')
-            continue
-    
-        if '@' not in email:
-            print('E-mail invalido')
-            continue
-
-        if '.com' not in email:
-            print('E-mail invalido')
-
-        if len(email) > 50:
-            print('E-mail invalido')
-            continue
-        
-        Banco_de_dados.append(email)
-        break
+    #while True:
+#
+    #    email = str(input('Digite o e-mail do novo usuário: ')).strip()
+#
+    #    if email in Banco_de_dados:
+    #        print('O e-mail já está cadastrado em outra conta.')
+    #        continue
+    #
+    #    if email == '':
+    #        print('O campo não pode ficar vazio.')
+    #        continue
+    #
+    #    if '@' not in email:
+    #        print('E-mail invalido')
+    #        continue
+#
+    #    if '.com' not in email:
+    #        print('E-mail invalido')
+#
+    #    if len(email) > 50:
+    #        print('E-mail invalido')
+    #        continue
+    #    
+    #    Banco_de_dados.append(email)
+    #    break
 
 
 
@@ -68,7 +69,7 @@ def cadastrar():
 
         senha = str(input('Digite a nova senha: ')).strip()
 
-        if senha in Banco_de_dados:
+        if senha in banco_de_usuarios:
             print('Está senha não está disponivel.')
             continue
     
@@ -80,9 +81,10 @@ def cadastrar():
             print('Digite uma senha valida; a senha deve ter entre 5 á 15 caracteres.')
             continue
         
-        Banco_de_dados.append(senha)
-        break
+        banco_de_usuarios['senha'] = senha
 
+        break
+    print('\n')
     print('** Novo usuário cadastrado com sucesso **') 
 
 def logar():
@@ -91,7 +93,7 @@ def logar():
 
         login = input('Digite o Login: ').strip()
 
-        if login not in Banco_de_dados:
+        if login not in banco_de_usuarios:
             print('Não há nenhum usuário cadastrado com esse login.')
             continue
 
@@ -100,10 +102,11 @@ def logar():
     while True:
         senha = input('Digite a senha. ').strip()
 
-        if senha not in Banco_de_dados:
+        if senha not in banco_de_usuarios:
             print('Senha incorreta.')
 
         break
+    print('\n')
     print('++ Acesso permitido, SEJA BEM-VINDO! ++')
 
 
