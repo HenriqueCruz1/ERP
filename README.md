@@ -36,3 +36,9 @@ Especificação de camadas teste // Projetando arquitetura de filtros.
 
 3° permitir acesso ao core da aplicação (até que os dados estiverem seguros)
 
+Armazenagem de dados:
+
++ 1° teste usando uma lista, funcional mas muito passiva a erros.
+
+
+
