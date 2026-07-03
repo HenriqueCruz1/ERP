@@ -1,4 +1,4 @@
-banco_de_usuarios = {}
+banco_de_usuarios = dict
 
 def menu():
 
